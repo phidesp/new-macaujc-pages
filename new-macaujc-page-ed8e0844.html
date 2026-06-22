@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新澳门六合彩 · 资料整编索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fbfbfb;
+            color: #1e1e2a;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* hero 区 —— 极简留白 */
+        .hero {
+            padding: 5rem 0 3rem 0;
+            text-align: left;
+            border-bottom: 1px solid #eaeef2;
+        }
+
+        .hero-title {
+            font-size: 2.4rem;
+            font-weight: 550;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #0b1a2e;
+        }
+
+        .hero-title span {
+            background: #f0f4fa;
+            padding: 0 0.3em;
+            border-radius: 0.15em;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: #3d4b5c;
+            max-width: 580px;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero-meta {
+            font-size: 0.85rem;
+            color: #7b8a9b;
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta span {
+            background: #eff2f6;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+        }
+
+        /* 通用章节 */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #eaedf0;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 520;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.4rem;
+            color: #11212e;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 1.3rem;
+            background: #336699;
+            margin-right: 0.6rem;
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 1.8rem 0 0.6rem 0;
+            color: #1f3142;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #2a3a4f;
+        }
+
+        a {
+            color: #2266aa;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #2266aa;
+        }
+
+        /* 优势卡片 —— 窄宽度内排列 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02), 0 2px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eaeef3;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-weight: 500;
+            font-size: 1rem;
+            color: #1a2a3c;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: #3d5062;
+        }
+
+        /* 说明区 —— 紧凑 */
+        .info-block {
+            background: #f6f9fd;
+            padding: 1.6rem 1.8rem;
+            border-radius: 14px;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要 —— 条目式 */
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #0d1f30;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: #3f546b;
+            line-height: 1.6;
+        }
+
+        /* 底部链接区 */
+        .footer-links {
+            padding: 2.5rem 0 3.5rem 0;
+            text-align: left;
+            border-top: 1px solid #eaedf0;
+            font-size: 0.9rem;
+            color: #556b7e;
+        }
+
+        .footer-links a {
+            color: #1e4d7a;
+        }
+
+        .footer-meta {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #7a8c9e;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 3.5rem 0 2rem 0;
+            }
+            section {
+                padding: 2rem 0;
+            }
+            .feature-item {
+                padding: 1rem 1.2rem;
+            }
+            .info-block {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- hero -->
+        <header class="hero">
+            <h1 class="hero-title">关于<span>新澳门六合彩</span>的信息整编</h1>
+            <p class="hero-desc">一份从资料整理与索引角度出发的简明参考，聚焦结构、习惯与常见问题。</p>
+            <div class="hero-meta">
+                <span>数据索引</span>
+                <span>信息梳理</span>
+                <span>参考框架</span>
+            </div>
+        </header>
+
+        <!-- 优势区：为什么需要整理视角 -->
+        <section>
+            <h2>索引优势</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <strong>结构优先级</strong>
+                    <p>将散落信息按主题归类，减少重复检索。适合需要快速定位内容的场景。</p>
+                </div>
+                <div class="feature-item">
+                    <strong>术语对照</strong>
+                    <p>整理常见表述与对应含义，降低因说法差异造成的理解成本。</p>
+                </div>
+                <div class="feature-item">
+                    <strong>版本脉络</strong>
+                    <p>关注规则与习惯的调整记录，提供基于时间线的概览参考。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 说明区：从整理角度谈资料内容 -->
+        <section>
+            <h2>说明 · 索引逻辑</h2>
+            <div class="info-block">
+                <p>通常对 <a href="https://new-macaujc.com">新澳门六合彩</a> 的信息需求分为三类：基础规则说明、历史数据参考以及术语定义。本索引以「信息单元」为最小整理单位，不包含主观预测或保证性内容。</p>
+                <p>资料收录范围以公开、可验证的描述为原则，并标注信息来源节点。例如，将「玩法说明」「赔率结构」「开奖流程」作为独立模块分别归档，便于对照查阅。索引本身不替代原始出处，但提供一条清晰的浏览路径。</p>
+                <p>针对频繁变动的部分（如时间安排或特殊规则），索引中会单独标记「待核实」节点，并建议以最新公告为准。这种整理方式尤其适合需要长期跟踪信息、但不想每次都从零开始搜索的使用场景。</p>
+            </div>
+        </section>
+
+        <!-- FAQ 摘要 -->
+        <section>
+            <h2>FAQ 摘要 · 常见信息点</h2>
+            <div class="faq-item">
+                <div class="faq-q">Q：从何处获取规则定义最为直接？</div>
+                <div class="faq-a">规则部分的原始说明通常分布在多个界面中。建议优先查看带有「说明」或「指南」标签的固定页面，并注意版本日期。索引中会提供指向 <a href="https://new-macaujc.com">新澳门六合彩</a> 相关页面的参考路径，但具体内容仍应以网页实际展示为准。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：历史记录一般保留多久？</div>
+                <div class="faq-a">根据常见实践，近期结果通常保留 30–90 天，更早的数据可能以压缩报表或归档形式存放。索引建议标记查询范围，避免因默认展示区间造成误解。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q：术语「特殊号码」与「特别号码」是同一概念吗？</div>
+                <div class="faq-a">在多数语境下二者指向同一位置，但不同时期或不同说明页的措辞存在混用。索引中会建立同义词对照，并标注首次出现的上下文。</div>
+            </div>
+        </section>
+
+        <!-- 底部链接 -->
+        <footer class="footer-links">
+            <p>该页面为信息整编索引，内容仅作参考。详细资料请直接查阅 <a href="https://new-macaujc.com">新澳门六合彩</a> 网站上的原始说明及公告。</p>
+            <p>索引版本基于公开资料整理，不构成任何形式的建议或保证。</p>
+            <div class="footer-meta">
+                资料整编 · 仅供信息索引参考
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
