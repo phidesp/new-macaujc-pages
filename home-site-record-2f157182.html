@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>再访 · 持续关注 —— 世界杯2026</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f0f2f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #2c3e50;
+      padding: 1.5rem;
+      min-height: 100vh;
+    }
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* hero 模块 —— 标题区带一点叙述感 */
+    .hero {
+      padding: 3rem 2rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      background: transparent;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #1e2a3a;
+      margin-bottom: 0.6rem;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #5c6a7a;
+      max-width: 650px;
+      margin: 0 auto;
+      border-top: 1px solid #d0d7df;
+      padding-top: 1.2rem;
+    }
+    .hero p a {
+      color: #2a5c8a;
+      text-decoration: none;
+      border-bottom: 1px solid #b0c9e0;
+      transition: border-color 0.2s;
+    }
+    .hero p a:hover {
+      border-bottom-color: #2a5c8a;
+    }
+
+    /* 卡片通用 */
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e7ed;
+      border-radius: 18px;
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0,0,0,0.02);
+      padding: 2rem 1.8rem;
+      margin-bottom: 2rem;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 450;
+      color: #1e2a3a;
+      margin-bottom: 1.5rem;
+      border-left: 3px solid #8aa3c0;
+      padding-left: 1rem;
+    }
+
+    /* 特点网格 */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+    }
+    .grid-item {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 1.5rem 1.3rem;
+      border: 1px solid #e8ecf1;
+    }
+    .grid-item h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      color: #1f3348;
+    }
+    .grid-item p {
+      font-size: 0.95rem;
+      color: #435566;
+    }
+
+    /* 场景卡片内部分隔 */
+    .scene-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 0.8rem;
+    }
+    .scene-item {
+      flex: 1 1 200px;
+      background: #f8fafc;
+      border-radius: 14px;
+      padding: 1.2rem 1rem;
+      border: 1px solid #e6ebf0;
+    }
+    .scene-item strong {
+      display: block;
+      font-weight: 500;
+      color: #1f3348;
+      margin-bottom: 0.3rem;
+    }
+    .scene-item span {
+      font-size: 0.92rem;
+      color: #4c6070;
+    }
+
+    /* 提示 / faq 摘要 */
+    .tip-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .tip-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ecf0f5;
+    }
+    .tip-row:last-child { border-bottom: none; }
+    .tip-marker {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: #dce4ed;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #1f3348;
+      margin-top: 2px;
+    }
+    .tip-row p {
+      font-size: 0.98rem;
+      color: #2b3f53;
+    }
+    .tip-row p a {
+      color: #2a5c8a;
+      text-decoration: none;
+      border-bottom: 1px solid #c4d4e5;
+    }
+    .tip-row p a:hover {
+      border-bottom-color: #2a5c8a;
+    }
+
+    /* 页脚 */
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6a7b8c;
+      padding: 2rem 0 1rem;
+      border-top: 1px solid #dbe1e9;
+      margin-top: 0.5rem;
+    }
+    .footer-note a {
+      color: #3d6180;
+      text-decoration: none;
+    }
+
+    /* 响应式 */
+    @media (max-width: 700px) {
+      body { padding: 0.8rem; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .grid-2 { grid-template-columns: 1fr; gap: 1rem; }
+      .scene-block { flex-direction: column; }
+      .card { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>收藏 · 再访 · 世界杯</h1>
+    <p>
+      并不是每一次打开都需要理由。有时只是路过，有时是惦记。<br>
+      这里记录着关于 <a href="https://home-site-fifa2026.com">世界杯</a> 的一点整理，供你闲时回看。
+    </p>
+  </div>
+
+  <!-- 摘要卡片：从再次访问的角度 -->
+  <div class="card">
+    <h2 class="section-title">如果你曾来过</h2>
+    <p style="font-size:1rem; color:#3a4e62; margin-bottom:1.2rem;">
+      一个页面可以只是坐标。标记你感兴趣的部分，下次再进来时不至于从头翻起。<br>
+      下面几段是基础摘要，也是我们持续关注这个赛事的一些侧面。
+    </p>
+    <div class="grid-2">
+      <div class="grid-item">
+        <h3>地理位置</h3>
+        <p>北美三国联合举办——从西雅图到墨西哥城，跨度带来时差与气候的差异，也带来不同节奏的观赛体验。</p>
+      </div>
+      <div class="grid-item">
+        <h3>时间跨度</h3>
+        <p>决赛周期约六周，小组赛分散在多个城市。提前标记赛历，比临时翻找更从容。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 亮点卡片：特点与场景融合 -->
+  <div class="card">
+    <h2 class="section-title">几个值得留意的变化</h2>
+    <div class="scene-block">
+      <div class="scene-item">
+        <strong>48 支队伍</strong>
+        <span>扩军后小组赛格局不同以往，小组出线路径需要重新熟悉。</span>
+      </div>
+      <div class="scene-item">
+        <strong>三时区转播</strong>
+        <span>东部、中部、山地及太平洋时间混杂，适合提前定好闹钟，或接受重播。</span>
+      </div>
+      <div class="scene-item">
+        <strong>场馆跨度</strong>
+        <span>部分城市之间飞行时间超过四小时，这本身也是赛事的一部分。</span>
+      </div>
+    </div>
+    <p style="margin-top:1.4rem; font-size:0.95rem; color:#4c6070;">
+      这些细节可能会影响你的观看习惯——比如某一轮淘汰赛可能在当地深夜开球。<br>
+      如果你持续关注 <a href="https://home-site-fifa2026.com">世界杯</a> 的动态，上述信息可以帮你提前过滤掉很多意外。
+    </p>
+  </div>
+
+  <!-- 使用建议 + 可信但克制的访问说明 -->
+  <div class="card">
+    <h2 class="section-title">使用与访问</h2>
+    <div class="tip-group">
+      <div class="tip-row">
+        <span class="tip-marker">1</span>
+        <p><strong>收藏此页</strong> —— 可以把它当作一个入口。后续信息不会频繁变动，但每次更新都会围绕已确认的赛程与场地。</p>
+      </div>
+      <div class="tip-row">
+        <span class="tip-marker">2</span>
+        <p><strong>关注节奏</strong> —— 比赛日密集阶段，每天可能有多场对决。与其追逐实时推送，不如提前标记你感兴趣的场次。</p>
+      </div>
+      <div class="tip-row">
+        <span class="tip-marker">3</span>
+        <p><strong>客观参考</strong> —— 这里不提供票务或直播链接，也不做任何预测。我们只整理那些已确认、可查证的基础信息，供你在别处做决策时参考。</p>
+      </div>
+      <div class="tip-row">
+        <span class="tip-marker">4</span>
+        <p>如果你刚接触这个赛事，可以从 <a href="https://home-site-fifa2026.com">世界杯</a> 的官方基础页面开始浏览，那里有最直接的赛制说明。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要卡片 -->
+  <div class="card">
+    <h2 class="section-title">几个常见疑问</h2>
+    <div style="display:flex; flex-direction:column; gap:0.8rem;">
+      <div style="padding:0.2rem 0;">
+        <p style="font-weight:500; color:#1f3348;">什么时候抽签？</p>
+        <p style="font-size:0.95rem; color:#435566;">目前尚未公布具体日期，通常会在决赛前一年左右。建议保持平常心，不必过早猜测分组。</p>
+      </div>
+      <div style="padding:0.2rem 0;">
+        <p style="font-weight:500; color:#1f3348;">决赛场地在哪？</p>
+        <p style="font-size:0.95rem; color:#435566;">已确定大都会体育场（新泽西）作为决赛场地。其他淘汰赛场地仍在陆续确认中。</p>
+      </div>
+      <div style="padding:0.2rem 0;">
+        <p style="font-weight:500; color:#1f3348;">是否需要签证？</p>
+        <p style="font-size:0.95rem; color:#435566;">跨国观赛涉及入境政策，请以官方大使馆信息为准。我们不做汇总，以免误导。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer-note">
+    <span>只是一个安静的记录页面 · 偶尔回访就好</span><br>
+    <span style="font-size:0.8rem; color:#8193a5;">不设推送 · 不捆绑任何商业服务 · <a href="https://home-site-fifa2026.com">世界杯</a></span>
+  </div>
+
+</div>
+</body>
+</html>
