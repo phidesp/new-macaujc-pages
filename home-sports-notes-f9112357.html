@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 从球场到日常</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f7f3ed;
+            color: #2e2c29;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: #fcf9f5;
+            padding: 2.8rem 2.2rem 3.2rem;
+            border-radius: 36px 36px 28px 28px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+            transition: all 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.8rem 1.4rem 2.4rem;
+                border-radius: 24px;
+            }
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 2.8rem;
+            border-left: 6px solid #b48c6c;
+            padding-left: 1.6rem;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #2a241e;
+            margin-bottom: 0.6rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.08rem;
+            color: #5b544c;
+            max-width: 90%;
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                max-width: 100%;
+            }
+        }
+
+        /* 引用块 / 提示框 */
+        .insight {
+            background: #efe9e1;
+            padding: 1.8rem 2rem;
+            border-radius: 20px;
+            margin: 2.4rem 0 2.8rem;
+            border-left: 0;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .insight p {
+            font-size: 1rem;
+            color: #3b3530;
+        }
+
+        .insight strong {
+            color: #7a5d42;
+            font-weight: 500;
+        }
+
+        /* 优势区 — 用卡片式描述 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem 1.8rem;
+            margin: 2.6rem 0 2.8rem;
+        }
+
+        .feature-item {
+            flex: 1 1 200px;
+            min-width: 160px;
+            background: transparent;
+            padding: 0.2rem 0;
+        }
+
+        .feature-item .num {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #b48c6c;
+            display: inline-block;
+            margin-bottom: 0.25rem;
+            border-bottom: 2px solid #dccfc0;
+            padding-bottom: 0.15rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin: 0.5rem 0 0.4rem;
+            color: #302a24;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #5a524a;
+        }
+
+        /* 说明区 */
+        .explain {
+            margin: 2.2rem 0;
+        }
+
+        .explain h2 {
+            font-size: 1.6rem;
+            font-weight: 450;
+            margin-bottom: 1rem;
+            color: #2c2621;
+        }
+
+        .explain p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .explain .callout {
+            background: #f1ede6;
+            padding: 1.2rem 1.6rem;
+            border-radius: 16px;
+            margin: 1.8rem 0;
+            color: #3f3832;
+            font-size: 0.97rem;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin: 2.6rem 0 2.2rem;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.4rem;
+            font-weight: 450;
+            margin-bottom: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .faq-summary h2:after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #dacfc2;
+            margin-left: 0.6rem;
+        }
+
+        .qa-block {
+            margin-bottom: 1.2rem;
+        }
+
+        .qa-block .q {
+            font-weight: 500;
+            color: #3d352e;
+            margin-bottom: 0.3rem;
+        }
+
+        .qa-block .a {
+            color: #4d453e;
+            font-size: 0.97rem;
+            padding-left: 1.2rem;
+            border-left: 3px solid #dccfc0;
+            margin-top: 0.1rem;
+        }
+
+        /* 底部 */
+        .footer-links {
+            border-top: 1px solid #ddd5ca;
+            padding-top: 1.8rem;
+            margin-top: 2.4rem;
+            font-size: 0.95rem;
+            color: #4b443b;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.8rem;
+            align-items: baseline;
+        }
+
+        .footer-links a {
+            color: #6a5a4a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.1s;
+        }
+
+        .footer-links a:hover {
+            border-bottom-color: #b48c6c;
+        }
+
+        .inline-link {
+            color: #6a5a4a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #c7b6a6;
+        }
+
+        .inline-link:hover {
+            text-decoration-color: #8b735b;
+        }
+
+        .footnote {
+            margin-top: 1.2rem;
+            text-align: right;
+            font-size: 0.85rem;
+            color: #9a8e82;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>世界杯的余音 · 日常的绿茵</h1>
+        <p>不是只有决赛夜才值得期待。那些从球场延伸到客厅、从屏幕渗入生活的细节，才是许多人真正记得的温度。</p>
+    </div>
+
+    <!-- 引用块 / 提示框 -->
+    <div class="insight">
+        <p><strong>一个小观察</strong> 很多人聊起世界杯，说的不是比分，而是某个傍晚、某场加时、某句解说。足球从来不只属于赛场，也属于那些平常的夜晚。</p>
+    </div>
+
+    <!-- 优势区 / 特点 -->
+    <div class="feature-grid">
+        <div class="feature-item">
+            <span class="num">· 01 ·</span>
+            <h3>节奏自由</h3>
+            <p>不必追赛程，不用记积分。想看时打开，随时可以融入那份氛围。</p>
+        </div>
+        <div class="feature-item">
+            <span class="num">· 02 ·</span>
+            <h3>记忆的锚点</h3>
+            <p>每届世界杯都像一段私人时间轴，标记着那年那月和你一起看球的人。</p>
+        </div>
+        <div class="feature-item">
+            <span class="num">· 03 ·</span>
+            <h3>不预设立场</h3>
+            <p>可以支持某支队伍，也可以只沉迷于某次漂亮的传球。足球本身足够。</p>
+        </div>
+    </div>
+
+    <!-- 说明区 / 从关键词展开 -->
+    <div class="explain">
+        <h2>从「世界杯」到你的世界</h2>
+        <p>可能你第一次认真看球是在朋友家的旧电视前，后来渐渐发现，重要的不只是哪支球队捧杯——<br>
+        还有那些因为比赛才凑到一起的聊天、短暂的欢呼，以及深夜厨房里重新热好的茶。<br>
+        这就是我们想聊的<a href="https://home-sports-fifa2026.com" class="inline-link">世界杯</a>：不宏大，但具体；不喧嚣，却常在。</p>
+
+        <div class="callout">
+            ⚽ 如果你也偶尔翻出旧集锦，或者在某场比赛结束后还回味了几天——这里有一些类似的碎片和角落，也许你会觉得熟悉。
+        </div>
+
+        <p>这个小小的空间不是为了复制直播或解读战术，而是想留住那种「足球和生活重叠」的感觉。你可以把它当作一个安静的路牌：指向那个被回忆、期待和日常包裹着的赛事。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <h2>几个常见的小问题</h2>
+        <div class="qa-block">
+            <div class="q">· 这里会放赛程或实时比分吗？</div>
+            <div class="a">不会。这里更偏向于赛前赛后的感受、记录和与足球有关的普通片段。想看数据可以移步官方平台。</div>
+        </div>
+        <div class="qa-block">
+            <div class="q">· 没有特定主队的人适合来吗？</div>
+            <div class="a">当然。我们相信世界杯的魅力有一部分属于「中立球迷」——纯粹欣赏比赛和故事的人往往最轻松。</div>
+        </div>
+        <div class="qa-block">
+            <div class="q">· 内容更新频繁吗？</div>
+            <div class="a">不追求日更，但每篇都会用心。像偶尔传来的球场喧闹，不打扰，却提醒你比赛还在继续。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <span>关于 <a href="https://home-sports-fifa2026.com">世界杯</a> 的更多日常视角</span>
+        <span>·</span>
+        <span>随意看看 · 仅作分享</span>
+    </div>
+    <div class="footnote">
+        ⚡ 从绿茵到生活，不过一个转身的距离
+    </div>
+
+</div>
+</body>
+</html>
